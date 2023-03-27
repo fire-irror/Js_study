@@ -70,6 +70,42 @@
       var text3 = text1 +" "+ text2;
       console.log(text3);
 
+      text1 += text2;
+      console.log(text1);
+
+      var x = 5 + 5; //출력값 : 10
+      console.log(x);
+
+      //숫자와 문자 
+      var x = "5" + 5;  //문자와 숫자를 더하여서 55로 출력된다. ==>문자연결자
+      console.log(x);
+
+      //비교 연산자
+      console.log(1==1); //출력값 : true
+      console.log(1=="1"); //출력값 : true 실제로 ""안에있는 값을 비교한다.
+      console.log(1==="1");   //출력값 :  false ==> 값과 type 둘 다 비교한다.  
+
+      console.log(1!="1"); //출력값 : false
+      console.log(1!=="1"); //출력값 : true
+
+      console.log(3>2); //출력값 true 
+      console.log(3>=2);
+      console.log(3<2); 
+      console.log(3<=2); 
+      //비교연산자는 계산하고 나면 타입이 boolean 타입이다.
+
+      //논리 연산자 : &, ||, !
+      console.log(3>2 && 1>2);  //결과값 : false
+      console.log(3>2 || 1>2);  //결과값 : true
+      console.log(!(3>2));  //결과값 : false
+      console.log(!(3<2));  //결과값 : true
+
+
+
+      
+
+
+
     </script>
 </body>
 </html>
