@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>연산자-산술,비교,논리</title>
+</head>
+<body>
+    <script>
+      //더하기
+      var x1 = 5;
+      var y1 = 2;
+      var z1 = x1 + y1;
+      console.log(z1);  //출력값 : 7
+      
+      //빼기
+      var x2 = 5;
+      var y2 = 2;
+      var z2 = x2 - y2;
+      console.log(z2);  //출력값 : 3
+
+      //나누기
+      var x4 = 5;
+      var y4 = 2;
+      var z4 = x4 / y4;
+      console.log(z4);  //출력값 : 2.5 자바하고 틀린 부분이다.
+
+      //거듭제곱
+      //곱하기
+      var x5 = 5;
+      var y5 = 2;
+      var z5 = x5 ** y5;  //5의 2승
+      console.log(z5);  //출력값 : 25
+
+      //나누기
+      var x6 = 5;
+      var y6 = 2;
+      var z6 = x6 % y6;
+      console.log(z6);  //출력값 : 10
+
+      //증가 연산자
+      var x7 = 1;
+      x7++;   //x = x + 1;
+      console.log(x7);
+      x7++;
+      console.log(x7);
+
+      //감소 연산자
+      var x8 = 4;
+      x8--;     //x = x-1; 
+      console.log(x8);
+      x8--;
+      console.log(x8);
+
+
+      var x9 = 5; //값이 바뀜 
+      var y9 = 2; //값이 바뀌지 않음
+      x9 += y9;
+      console.log(x9);  //출력값 : 7
+
+      x9 -= y9;
+      console.log(x9);  //출력값 : 5
+
+      x9 *= y9;
+      console.log(x9);  //출력값 : 10
+
+      x9 /= y9;
+      console.log(x9);  //출력값 : 5
+
+      //문자열 연산자
+      var text1 = "방탄소년단";
+      var text2 = "뷔";
+      var text3 = text1 +" "+ text2;
+      console.log(text3);
+
+    </script>
+</body>
+</html>
