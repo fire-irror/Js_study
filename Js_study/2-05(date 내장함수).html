@@ -1,0 +1,81 @@
+<html>
+<head>
+    <title> date 내장함수 </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+</head>
+<body>
+    <script>
+      var d1 = new Date(); //날짜와 관련된 정보를 지원해주는 class 
+      //데이터를 system에서 가져온다.
+      console.log(d1);
+
+
+      //특정 날짜 및 시간을 직접 지정
+      // month: 월은 0 부터 시작한다.
+      // day : 일은 1부터 시작한다.
+      var d2 = new Date(2023,11,25,13,30);  //0이 1월달이기 때문에 11로 찍어야 한다.
+      console.log(d2);
+      console.log(d2.getMonth());
+
+      var month = ["Jan","Fab","Mar"];
+      var mon = 2;
+      console.log(month[mon]);
+
+
+      var d3 = new Date();
+      console.log(d3);
+
+      //년도 가지고 오기
+      var year = d3.getFullYear();
+      console.log(year);
+
+      var month = d3.getMonth();
+      console.log(month);
+
+      var date = d3.getDate();
+      console.log("date " + date);
+
+      //일요일 : 0   월 :1  화 : 2 .... 토요일 :6
+      var day = d3.getDay();
+      console.log(day);
+
+      var hour = d3.getHours();
+      var minute = d3.getMinutes();
+      var second = d3.getSeconds();
+      console.log(hour, minute, second);
+
+      //글로벌 서비스일 경우에는 접속한 국가의 타임존을 고려
+      //2023.4.23.14:25 (한국)
+      //글제목, 작성자, 작성일 :
+      //2023.4.24.05.25 (영국)
+
+      var d4 = new Date();
+      console.log("timeZone ",d4); //GMT+0900 
+
+      console.log("timeZome "+d4.getTimezoneOffset()); //출력값(분단위) : -540 -->9시간
+
+      //특정 날짜와 시간을 직접 지정할 수도 있음.
+      var d5 = new Date();
+      d5.setFullYear(2007);
+      d5.setMonth(7);
+      d5.setDate(28);
+      console.log(d5);
+
+      //실무에서는 moment.js를 사용한다.
+      //내가 원하는 형태로 출력할 수 있다.
+      var d6 = new Date();
+      console.log(d6);
+      console.log(moment().format("YYYY-MM-DD"));
+      console.log(moment().format("MMM DD, YYYY"));
+
+      //오늘을 기준으로 일주일전을 검색
+      console.log(moment().subtract(7,"days").format("MMM DD, YYYY"));
+
+      //오늘을 기준으로 일주일 후를 검색
+      console.log(moment().add(7,"days").format("MMM DD, YYYY"));
+
+      //오늘을 기준으로 4시간후를 검색
+      console.log(moment().add(4, "hours").format("YYYY-MM-DD HH"));
+    </script>
+</body>
+</html>
