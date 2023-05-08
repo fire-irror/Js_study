@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>window객체</title>
+</head>
+<body>
+    <script>
+      console.log(window);
+      //window는 생략이 가능하다.
+      //window.alert("이것은 대화창 입니다.");
+      //확인 버튼을 누를 때
+      // alert("이것은 대화창 입니다.");
+
+      // //확인 취소를 선택할 수 있다.
+      // var tn = confirm("정말로 삭제하시겟습니까?");
+    
+      // //true false로 결과를 확인할 수 있다.
+      // console.log(tn)
+
+      // if(confirm("정말로 삭제하시겟습니까?")) {
+      //   //확인 button을 눌렀을 때 삭제를 실행하도록.
+      //   console.log("삭제 실행");
+      // }
+
+      // var passwd = prompt("너의 마음속으로 들어갈 수 있는 비밀번호를 알려줘..");
+      // //console.log(passwd);
+
+      // if(passwd===null){
+      //   console.log("취소 선택");
+      // }else if(passwd===""){
+      //   console.log("확인 선택")
+      // }else if(passwd!==""){
+      //   console.log(passwd);
+      // }
+
+      //누르면 이 링크로 이동하게 된다.
+      //window.open("http://naver.com");
+
+      //인쇄할 수 있는 창
+      //window.print();
+
+      //setTimeout
+      //3초후에 프로그램이 실행된다.
+      setTimeout(function(){
+        alert("꺄아아아아앙");
+        console.log("3초후에 프로그램이 실행됩니다.");
+      },3000)
+      
+
+      //setInterval
+      var i=0;
+      var fnc = setInterval(function(){
+        console.log("꺄아아앙아ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ"+i);
+        console.log("1초마다 프로그램 호출"+i);
+        if(i===5){
+          clearInterval(fnc);
+        }
+        i++
+      },1000)
+
+
+
+    </script>
+</body>
+</html>
