@@ -1,63 +1,82 @@
 <html>
+
 <head>
     <title>Math 내장객체</title>
 </head>
+
 <body>
     <script>
-    //Math 수학
-    //round() : 함수 : 반올림을 해준다
-    console.log(Math.round(4.6));   //출력값 : 5
-    console.log(Math.round(4.4));   //출력값 : 4
+        //Math 수학
+        //round() : 함수 : 반올림을 해준다
+        console.log(Math.round(4.6));   //출력값 : 5
+        console.log(Math.round(4.4));   //출력값 : 4
 
-    //ceil함수 : 무조건 올리기
-    console.log(Math.ceil(4.9));  //출력값 : 5
-    console.log(Math.ceil(4.1));  //출력값 : 5
-    console.log(Math.ceil(4.0));  //출력값 : 4
+        //ceil함수 : 무조건 올리기
+        console.log(Math.ceil(4.9));  //출력값 : 5
+        console.log(Math.ceil(4.1));  //출력값 : 5
+        console.log(Math.ceil(4.0));  //출력값 : 4
 
-    // 게시판에 총 글이 72건 
-    //1페이지에 보여주는 건수는 10개라고 한다면 
-    //[1][2][3][4][5][6][7][8]
-    console.log(Math.ceil(72/10));
+        // 게시판에 총 글이 72건 
+        //1페이지에 보여주는 건수는 10개라고 한다면
+        //[1][2][3][4][5][6][7][8]
+        console.log(Math.ceil(72 / 10));
 
-    //1페이지에 보여주는 건수를 15개로 수정하면 
-    console.log(Math.ceil(15/10));
+        //1페이지에 보여주는 건수를 15개로 수정하면 
+        console.log(Math.ceil(15 / 10));
 
-    //floor():무조건 내림
-    console.log(Math.floor(4.9)); //출력값 : 4 
-    console.log(Math.floor(-4.2)); //출력값 : -5  시험시험시험시험시험시험시험시험시험시험시험시험시험시험시험시험시험시험시험시험시험시험
+        //floor():무조건 내림
+        console.log(Math.floor(4.9)); //출력값 : 4 
+        console.log(Math.floor(-4.2)); //출력값 : -5  시험시험시험시험시험시험시험시험시험시험시험시험시험시험시험시험시험시험시험시험시험시험
 
-    //trunc() : 정수만 return 한다
-    console.log(Math.trunc(4.9)); //출력값 : 4
-    console.log(Math.trunc(4.1)) ; //출력값 : 4
-    console.log(Math.trunc(-4.2));  //출력값 :-4
+        //trunc() : 정수만 return 한다
+        console.log(Math.trunc(4.9)); //출력값 : 4
+        console.log(Math.trunc(4.1)); //출력값 : 4
+        console.log(Math.trunc(-4.2));  //출력값 :-4
 
-    //sign() : 음수면은 수의 상관없이 -1을 return 하고 양수이면 0을 return 한다
-    console.log(Math.sign(-7));   //출력값 : -1
-    console.log(Math.sign(23));   //출력값 : 1
-    console.log(Math.sign(0));    //출력값 : 0
+        //sign() : 음수면은 수의 상관없이 -1을 return 하고 양수이면 0을 return 한다
+        console.log(Math.sign(-7));   //출력값 : -1
+        console.log(Math.sign(23));   //출력값 : 1
+        console.log(Math.sign(0));    //출력값 : 0
 
-    //pow() : 제곱근구하기
-    console.log(Math.pow(8,2)); //8의 2승 == 64
+        //pow() : 제곱근구하기
+        console.log(Math.pow(8, 2)); //8의 2승 == 64
 
-    //sqrt() : 제곱근
-    console.log(Math.sqrt(64)); //제곱근 == 8
+        //sqrt() : 제곱근
+        console.log(Math.sqrt(64)); //제곱근 == 8
 
-    //abs() : 절댓값 구하기
-    console.log(Math.abs(4.7)); //출력값 : 4.7
-    console.log(Math.abs(-4.7));  //출력값 : 4.7
+        //abs() : 절댓값 구하기
+        console.log(Math.abs(4.7)); //출력값 : 4.7
+        console.log(Math.abs(-4.7));  //출력값 : 4.7
 
-    //max() 함수와 min()함수
-    console.log(Math.max(0,150,23,45,-28,77));  //출력값 : 150
+        //max() 함수와 min()함수
+        console.log(Math.max(0, 150, 23, 45, -28, 77));  //출력값 : 150
 
-    console.log(Math.min(1,8,9,6,10,0,650));    //출력값 : 0
+        console.log(Math.min(1, 8, 9, 6, 10, 0, 650));    //출력값 : 0
 
-    //random()함수
-    
+        //random()함수
+        //var x1 = Math.random();     //0이상 1미만의 임의의난수를 발생 1이 나오지 않는다.
+        console.log(x1);
 
+        //1에서 6사이의 임의의 랜덤 숫자
+        var x2 = Math.trunc(Math.random() * 6) + 1;
+        console.log(x2);
 
-  
+        var x3 = Math.floor(Math.random() * 6 + 1);
+        console.log(x3);
 
+        console.log("(" + x2 + "," + x3 + ")");
 
+        //임의의 정수를 생성해주는 함수
+        function getRndInteger(min, max){
+            return Math.floor(Math.random()*(21))+50;
+        }       
+
+        //min = 1, max = 6
+        console.logo(getRndInteger(50,70));
+        
+
+        
     </script>
 </body>
+
 </html>
