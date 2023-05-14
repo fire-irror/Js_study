@@ -20,22 +20,23 @@
       // //let   var 하고 차이점은 똑같은 변수를 또 사용할 수 없다.
       // //ES6 버전부터 추가됨
 
-      // let x1 = 5;
-      // let x2 = 7;     //재선언시 에러가 발생함. 
-      // let z1 = x1 + y1; 
+      let x1 = 5;
+      let y1 = 7;     //재선언시 에러가 발생함. 
+      var z1 = x1 + y1; 
 
-      // z1 =8;  //정상적으로 실행 됨
+    z1 =8;  //정상적으로 실행 됨
 
-      // console.log(z1);
+
+      console.log(z1);
 
       //const   ES6버전 부터 추가
-      const PI = 3.14;    //콘손창에서는 에러 발생
+      //const PI = 3.14;    //콘손창에서는 에러 발생
       //PI = 3.141592;    //실행시 에러발생
 
      // const PI = 3.141596;  //변수명 재선시 에러발생
-      console.log(PI);
+      //console.log(PI);
 
-      var x2;
+      //var x2;
       //const x2; //선언과 동시에 초기화 해주어야 함. 나중에 값을 못 바꾸니까.
     </script>
 </body>
