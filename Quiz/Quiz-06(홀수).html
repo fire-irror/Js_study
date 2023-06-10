@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>홀수를 구하고 최소값을 찾기</title>
+</head>
+<body>
+    <script>
+      function solution(arr){
+        let answer = [];  //값을 넣을 때는 push를 사용한다.
+        let sum = 0, min = Number.MAX_SAFE_INTEGER;
+
+        for(let i of arr){
+          if( i % 2 === 1){
+            sum+= i;
+            if(i < min) min = i;
+          }
+        }
+        answer.push(sum);
+        answer.push(min);
+        return answer;
+        // for(let i=0; i<arr.length; i++){
+        //   if(arr[i]%2 === 1){
+        //     answer = arr[i];
+        //   console.log(Math.min(...arr));
+        //   }
+        // }
+
+        //return answer;
+      }
+      let arr = [12,77,38,41,53,92,85];
+      console.log(solution(arr))
+    </script>
+</body>
+</html>
