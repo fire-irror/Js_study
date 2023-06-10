@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>삼각형 판별하기</title>
+</head>
+<body>
+    <script>
+      function solution(a,b,c){
+        let answer;
+
+        if(a+b>c && a+c>b && b+c>a){
+          answer="yes"
+        }
+        else{
+          answer="No"
+        }
+        return answer;
+      }
+      console.log(solution(1,2,3));
+    </script>
+</body>
+</html>
