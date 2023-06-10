@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>this 키워드</title>
+</head>
+<body>
+  <input type="button" value="로그인">
+  <button onclick="this.style.backgroundColor='red'">클릭 1</button>
+  <button onclick="callFunc(this)">클릭 2</button>
+  <select onchange="changeselect()">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+</select>
+    <script>
+
+      function changeselect(obj2){
+        alert("집가고 싶고 졸리다");
+      }
+      function callFunc(obj1){
+        console.log(obj1)
+        //alert("꺙ㅇㅇㅇㅇㅇㅇ");
+      }
+      //this는 객체가 자기자신을 부르는 것 
+      //console.log(this);  //this는 윈도우 객체를 가리킨다.
+      
+      var person = {
+        firstName : "길동",
+        lastName : "홍",
+        fullName : function(){
+          return person.firstName + " " + person.lastName;  //this는 객체 이름인 this.firstname으로 써도 된다
+          //하지만 this는 person 객체를 가리키므로 person을 써도 된다.
+        }
+      }
+      console.log(person.fullName());
+
+      function myFunction(){
+        console.log(this);  //window를 가리킨다
+      }
+      myFunction();
+    </script>
+</body>
+</html>
