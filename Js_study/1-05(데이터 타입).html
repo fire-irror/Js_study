@@ -5,31 +5,33 @@
 <body>
     <script>
       let name = "홍길동";
-      
-/*
       let name1 = "홍길동";
       let name2 = "홍길순";
       //  let str1 = "나의 이름은 "홍길동" 입니다.";  //홍길동에 "" 하면 에러발생
       let str1 = "나의 이름은 '홍길동' 입니다";
       console.log(str1);
 
-      let str2 = "나의 이름은 \"홍길동\" 입니다.";
+      let str2 = "나의 이름은 \"홍길동\" 입니다.";  // /모양을 사용하여 "" 를 콘솔창에 나타낸다.
       console.log(str2);
+      //결과값 :나의 이름은 "홍길동" 입니다.
 
-      let str3 = "나의 이름은 \\홍길동\\입니다.";
+      let str3 = "나의 이름은 \\홍길동\\입니다."; //출력시 /홍길동/ 으로 출력된다.
       console.log(str3);
 
 
       //Number :숫자
       let x1 = 3;
       let y1 = 3.14;
+      console.log(x1);
+      console.log(y1);
     
       //undefined
-      let u1;
-      //console.log(ul);
+
+      let u987; //undefined 로 결과값이 나온다.
+      console.log(u987);
       
       let u2 = undefined;
-      console.log(undefined);
+      console.log(u2);  //결과값 undefined
       
       //null
       let n1 = null;  
@@ -37,19 +39,19 @@
 
       let n2 = null;
       console.log(n2+1);  //찍으면 출력값이 1로 찍힌다. 
+      //null 값은 0이므로 1이 찍힘
 
       //object : 객체를 지원해 준다
 
       //JAVA object : java에서 class(틀) 객체 ==> 붕어빵
       //js object : 선언 후 멤버변수 초기화
-      */
 
       let person1 = {};          //객체 선언 
       person1.firstName ="길동";  
       person1.lastName = "홍";  //멤버변수 초기화
       person1.age = "20";
 
-      /*//object 선언과 동시에 초기화
+      //object 선언과 동시에 초기화
       let person2 = {
         firstName :"길순",
         lastName : "홍",
@@ -61,7 +63,7 @@
       person3["lastName"] = "홍";
       person3["age"] = 18;
 
-      console.log(person1.firstName);
+      console.log(person1.firstName); //이런식으로 객체의 해당 값을 가져올 수 있다. 
       console.log(person1.lastName);
       console.log(person1.age);
 
@@ -69,7 +71,7 @@
       person2.email = "hong@gmail.com"; //나중에 선언하고 찍어도 된다.
       console.log(person2.email);
 
-      document.write(person3.firstName + "<br>");
+      document.write(person3.firstName + "<br>"); //화면에 출력된다.
       document.write(person3.lastName);
 
 
@@ -98,8 +100,7 @@
       console.log(arr2[0]);
       console.log(arr1[1]);
       console.log(arr1[2]);
-      */
-
+      
 
       //선언과 초기화를 동시에 하지 않아도 된다.
       let arr3 = [];
@@ -115,28 +116,28 @@
 
       //push 메소드를 사용하면 인덱스가 몇 부터 시작했는지 알 필요 없이 계속 작업할 수 있다.
       arr4 = [];
-      arr4.push ("BTS");
-      arr4.push = (7);
-      arr4.push = (undefined);
-      arr4.push = (null);
+      arr4[0]="박화경";
+      arr4.push ("BTS");  //push를 사용하여 문자열을 집어넣을 수 있음
+      arr4.push(7);
+      arr4.push(undefined);
+      arr4.push(null);
 
-      // console.log(arr4[0]);
-      // console.log(arr4[1]);
-      // console.log(arr4[2]);
+      console.log(arr4[0]);
+      console.log(arr4[1]);
+      console.log(arr4[2]);
 
-      // for(var i=0; i<arr4.length; i++){
-      //   //console.log(arr4[i]);
-      //   document.write(arr[i] + "<br>")
-      // }
-
+      for(var i=0; i<arr4.length; i++){
+        //console.log(arr4[i]);
+        document.write(arr4[i]+"</br>"); 
+      }
 
     //   //Boolean 참/거짓 -true or false
       let isAdult = true; //or false
       let num1 = 5;
-    //   let num2 = 7;
+      let num2 = 7;
     //   console.log(num1 > num2);   //결과값 false
 
-    console.log(typeof num1);
+    console.log(typeof num1);   //typeof를 사용하면 객체의 타입을 알 수 있다.
     console.log(typeof isAdult);
     console.log(typeof name1);
     console.log(typeof person1);
