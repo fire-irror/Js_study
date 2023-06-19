@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Arrow Function</title>
+</head>
+<body>
+    <script>
+      function hello1(){
+        console.log("Hello wolrd");
+      }
+      hello1();
+
+      var hello2 = function(){
+        console.log("Hello world2");
+      }
+      hello2(); //변수로 hello2를 선언하였기 때문에 위에서 함수를 호출할 수 없다.
+
+
+      //Arrow function
+      var hello3 = () => {
+        console.log("Hello world3");
+        return "Hello world3"
+      }
+      var str = hello3();
+      console.log(str); 
+
+      var hello4 = () => "Hello world4";
+
+      //위의 코드와 동일하다.
+      // var hello4 = function(){
+      //   return "Hello world4";
+      // }
+      var str = hello4();
+      console.log(str);
+
+
+      var hello5 = function(fullName) {
+        return "Hello5" + " " + fullName;
+      }
+      console.log(hello5("홍길동"));
+
+
+      //arrow 함수 호출시 매개변수를 전달하는 경우 
+      // 매개변수가 하나일 경우에는 () 생략가능
+      var hello5 = (fullName) => "Hello5" + " " + fullName;
+      console.log(hello5("홍길동"));
+
+      var hello6 = (fullName, lastName) => "Hello6" + " "+fullName + " " +lastName;
+      console.log(hello6("길동" , "홍"));
+
+    </script>
+</body>
+</html>
