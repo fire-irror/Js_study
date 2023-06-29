@@ -4,100 +4,101 @@
 </head>
 <body>
     <script>
-      // var txt = "ABCDEFGHIJKLMN";
-      // console.log(txt.length);  //문자열의 size가 나온다.
+      var txt = "ABCD";
+      console.log(txt.length);  //문자열의 size가 나온다.
 
       //index of  
       var str = "Please locate where 'locate'";   //첫번째 만나는 위치값을 알려준다. 
-      // console.log(str.indexOf("locate"));     //해당 단어가 위치하는 인덱스값을 알려준다. 7이라는 숫자가 return 된다. 
-      // console.log(str.indexOf("chio")); //없는 단어는 -1 return
+      console.log(str.indexOf("locate"));     //해당 단어가 위치하는 인덱스값을 알려준다. 7이라는 숫자가 return 된다. 
+      console.log(str.indexOf("chio")); //없는 단어는 -1 return
+      console.log(str); //Please locate where 'locate'
 
-      // if(str.indexOf("locate") > -1){
-      //   console.log("locate 문자 발견");
-      // }
+      if(str.indexOf("locate") > -1){
+        console.log("locate 문자 발견");
+      }
 
-      // console.log(str.lastIndexOf("locate"));   //마지막 문자열을 먼저 읽는다.
+      console.log(str.lastIndexOf("locate"));   //마지막 문자열을 먼저 읽는다.
 
       // //search 앞에서만 사용함
-      // console.log(str.search("locate"));
+      console.log(str.search("locate"));
 
-      //slice 자르기
-      // var str = "Apple, Banana, Kiwi";
-      // console.log(str.slice(7,13));   //index-1이기 때문데 banana만 나오고 , 는 나오지 않는다. (인덱스,인덱스-1) OR (인덱스, 글자수)  
-      // console.log(str.slice(7));  //banana kiwi가 나오게 된다.
-      // console.log(str.slice(-12,-6))  //뒤에서 부터 출력해서 banana가 출력된다.
+        //slice 자르기
+        var str = "banana, apple, Kiwi";
+        console.log(str.slice(7,13));   //index-1이기 때문데 banana만 나오고 , 는 나오지 않는다. (인덱스,인덱스-1) OR (인덱스, 글자수)  
+        console.log(str.slice(7));  //banana kiwi가 나오게 된다.
+        console.log(str.slice(-12,-6))  //뒤에서 부터 출력해서 apple가 출력된다.  인덱스-1을 해서 apple까지 출력된다.
 
-      //substring
-      // var str = "Apple, Banana, Kiwi";
-      //   console.log(str.substring(7,13)); //출력값 banana
+        // substring
+        var str = "banana, apple, Kiwi";
+        console.log(str.substring(7,13)); //출력값 banana
 
-      //   //substr 글자수를 나타낸다
-      //   console.log(str.substring(7,6));  //출력값 banana 인덱스를 기준으로 6글자를 나타낸다. 
+        //substr 글자수를 나타낸다
+        console.log(str.substr(7,6));  //출력값 banana 인덱스를 기준으로 6글자를 나타낸다. 
 
 
-        // var jumin1 ="060114";
-        // console.log(jumin1.substring(0,2));
-        // console.log(jumin1.substring(2,2));
-        // console.log(jumin1.substring(4,2));
+        var jumin1 ="060114";
+        console.log(jumin1.substr(0,2));
+        console.log(jumin1.substr(2,2));
+        console.log(jumin1.substr(4,2));
 
-        // var jumin2 ="2007-08-28";
-        // console.log(jumin2.substring(0,jumin2.indexOf("-"))); 
+        var jumin2 ="2007-08-28";
+        console.log(jumin2.substr(0,4));
+        console.log(jumin2.substring(0,jumin2.indexOf("-"))); 
 
         //replace
-        // var str1 = "Please visit here";
-        // str2=str1.replace("here","there"); //here을 there로 바꾸자~
-        // console.log(str2);
+        var str1 = "Please visit here";
+        str2=str1.replace("here","there"); //here을 there로 바꾸자~
+        console.log(str2);
 
-        // var str3 = "Please visit here";
-        // var str4=str3.replace("here","there"); 
-        // console.log(str4);
+        var str3 = "Please visit here";
+        var str4=str3.replace("here","there"); 
+        console.log(str4);
 
-        // var str5 = "Please visit here here here";
-        // var str6=str5.replace(/here/g,"there");   //g는 글로벌 전부 다 바뀐다.
-        // console.log(str6);
+        var str5 = "Please visit here here here";
+        var str6=str5.replace(/here/g,"there");   //g는 글로벌 전부 다 바뀐다.
+        console.log(str6);
 
-        // var str7 = "Please visit HERE Here HeRe";   //대소문자는 구분한다.
-        // var str8=str7.replace(/here/ig,"there");     //ignore의 약자로 대소문자를 구분하지 않고 다 바꿀 수 있다.
-        // console.log(str8);
+        var str7 = "Please visit HERE Here HeRe";   //대소문자는 구분한다.
+        var str8=str7.replace(/here/ig,"there");     //ignore의 약자로 대소문자를 구분하지 않고 다 바꿀 수 있다.
+        console.log(str8);
 
-        // //uppercase : 모두 대문자로
-        // var str8 = "Please visit HERE Here HeRe";
-        // console.log(str8.toUpperCase());  
+        //uppercase : 모두 대문자로
+        var str8 = "Please visit HERE Here HeRe";
+        console.log(str8.toUpperCase());  
 
-        // //toLowercase : 모두 소문자로
-        //var str9 = "Please visit here";
-        // var str9 = "Please visit HERE Here HeRe";
-        // console.log(str9.toLowerCase());  
+        //toLowercase : 모두 소문자로
+        var str9 = "Please visit here";
+        var str9 = "Please visit HERE Here HeRe";
+        console.log(str9.toLowerCase());  
 
         //db에서 john 검색
+      var txt1="hello";
+      var txt2 = "world";
+      var txt3 = txt1+ " " +txt2;
+      console.log(txt3);
+      console.log(txt1.concat(txt2)); //concat으로 글자수를 합치고 파라미터가 얼마 있던지 간에 상관하지 않는다.
 
-      // var txt1="hello";
-      // var txt2 = "world";
-      // var txt3 = txt1+ " " +txt2;
-      // console.log(txt3);
-      // console.log(txt1.concat(txt2)); //concat으로 글자수를 합치고 파라미터가 얼마 있던지 간에 상관하지 않는다.
-
-    // var str10 = "                           Hello                    world";
-    // console.log(str10);
-    // console.log(str10.trim());  //앞에있는 공백을 지워준다.
+    var str10 = "                           Hello                    world";
+    console.log(str10);
+    console.log(str10.trim());  //앞에있는 공백을 지워준다.
 
 
-    // //padStart
-    // var str11 ="15";
-    // console.log(str11.padStart(8,0));   //전체 문자열 8자리 중에 나머지 빈 값은 0으로 채운다.
+    //padStart
+    var str11 ="15";
+    console.log(str11.padStart(8,0));   //전체 문자열 8자리 중에 나머지 빈 값은 0으로 채운다.
 
     //특정 자릿수를 동일하기 위해서 사용 : 예)날짜를 두자릿수로 동일
-    // var str12 = "3";
-    // console.log(str12.padStart(2,0)); //결과값 : 03
+    var str12 = "3";
+    console.log(str12.padStart(2,0)); //결과값 : 03
 
 
-    // //padEnd 앞에다가 내용을 넣고 뒤의 수를 맞춘다. 4자리를 만들어주기 위해서 뒤에 0이 3개가 붙는다. 
-    // var str13 = "13";
-    // console.log(str13.padEnd(4,0)); //결과값 : 03
+    //padEnd 앞에다가 내용을 넣고 뒤의 수를 맞춘다. 4자리를 만들어주기 위해서 뒤에 0이 3개가 붙는다. 
+    var str13 = "13";
+    console.log(str13.padEnd(4,0)); //결과값 : 03
 
     //charAt 특정한 위치에 해당하는 문자를 가져온다 
-    // var str14 = "Hello wolrd";
-    // console.log(str14.charAt(6));
+    var str14 = "Hello wolrd";
+    console.log(str14.charAt(6));
 
     //spilt
     var tags = "키보드, 기계식, 블루투스";
