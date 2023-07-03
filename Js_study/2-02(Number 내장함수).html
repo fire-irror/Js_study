@@ -5,48 +5,45 @@
 <body>
     <script>
       //tostring
-      // var x1 = 123;
-      // console.log(x1);
-      // console.log(x1+1);
-      // console.log(x1.toString()+1);  //문자열 123이 된다 +가 문자연결자가 되어 1231이 된다.
+      var x1 = 123;
+      console.log(x1);
+      console.log(x1+1);
+      console.log(x1.toString()+1);  //문자열 123이 된다 +가 문자연결자가 되어 1231이 된다.
 
       // toFixed() : 지정된 소수점 자릿수까지 반올림으로 표시
-      // var x2 = 123999.562243;
-      // console.log(x2.toFixed(2)); //출력값은 123999.56이 된다. 소수점 3번째 자리에서 반올림 된다
+      var x2 = 123999.565243;
+      console.log(x2.toFixed(2)); //출력값은 123999.56이 된다. 소수점 3번째 자리에서 반올림 된다
+      //정수자리도 포함해서 2자리를 출력하는 것 
 
-      // //toPrecision()
-      // var x3 = 9.565;
-      // console.log(x3.toPrecision(2)); //출력값 9.6  정수까지 포함해서 반올림 해준다.
+      // //toPrecision()  5가 반올림 되지 않는 이유는?
+      var x3 = 3.555;
+      console.log(x3.toPrecision(2)); //출력값 9.6  정수까지 포함해서 반올림 해준다.
 
-    // var x4 = Number("10");   //문자열을 숫자로 바꿔준다.
-    // console.log(x4+1); //출력값 11 숫자로 바뀌었기 때문에 더하기가 가능하다.
+    var x4 = Number("10");   //문자열을 숫자로 바꿔준다.
+    console.log(x4+1); //출력값 11 숫자로 바뀌었기 때문에 더하기가 가능하다.
 
-    // var x5 = Number(true);
-    // console.log(x5);
+    var x5 = Number(true);
+    console.log(x5);
 
-    // var x5 = Number(false);
-    // console.log(x5);
+    var x5 = Number(false);
+    console.log(x5);
 
-    // console.log(Number("                    10             "));   //스스로 공백을 제거하고 숫자로 변환한다. 출력값 : 10
-    // console.log(Number("10.333"));                                //출력값 : 10.333
-    // console.log(Number("10,333"));                                //출력값 : NaN 숫자가 아니라고 알려준다. Not a Number
+    console.log(Number("                    10             "));   //스스로 공백을 제거하고 숫자로 변환한다. 출력값 : 10
+    console.log(Number("10.333"));                                //출력값 : 10.333
+    console.log(Number("10,333"));                                //출력값 : NaN 숫자가 아니라고 알려준다. Not a Number
 
 
     //number은 소수점까지 나오지만 parseInt는 정수를 만드는 내장함수이다.
 
     // //parseInt()
-    // console.log(parseInt("3"));   //파라미터 안에있는 문자열을 숫자로 바꿔준다.
-    // console.log(parseInt("3.33"));  //결과값 : 3
-    // console.log(parseInt("30  40  60"));  //결과값 : 30 앞에있는 숫자만 가져온다.
+    console.log(parseInt("3"));   //파라미터 안에있는 문자열을 숫자로 바꿔준다.
+    console.log(parseInt("3.33"));  //결과값 : 3
+    console.log(parseInt("30  40  60"));  //결과값 : 30 앞에있는 숫자만 가져온다.
 
     //ParseFloat
     console.log(parseFloat("10")) //float형으로 변환 결과값 :10
     console.log(parseFloat("10.3")) //결과값 10.3
     //중간에 공백이 있으면, 앞에 있는 숫자만 나온다. 
-
-    
-
-
 
     </script>
 </body>
