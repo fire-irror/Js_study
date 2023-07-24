@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>보이는 학생</title>
+</head>
+<body>
+    <script>
+      function solution(str){
+        let answer = 1;
+        
+        answer.push(str[0]);
+        for(let i=0; i<str.length; i++){
+          if(str[i]>str[i-1]){
+            answer.push(str[i]);
+
+          }
+        }
+        return answer;
+      }
+      let str = ["130","135","148","140","150","150","153"];
+      console.log(solution(str));
+    </script>
+</body>
+</html>
