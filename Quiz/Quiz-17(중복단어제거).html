@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Form</title>
+</head>
+<body>
+    <script>
+      function solution(str){
+        let answer = [];
+        //방법 1
+        // for(let i=0; i<str.length; i++){
+        //   if (answer.indexOf(str[i]) === -1) {
+        //   answer.push(str[i]);
+        //   }
+        //}
+
+        // //방법 2
+        // answer = str.filter(function(v, i){
+        //   //console.log(v,i,str.indexof("good"));
+        //   // if(str.indexof(v)===i){
+        //   //   return true;
+        //   // }
+        //   return str.indexof(v) === i;
+        // });
+
+        answer = str.filter((v,i) => str.indexof(v) === i);
+        return answer;
+      }
+      let str = ["good","time","good","time","student"];
+      console.log(solution(str));
+    </script>
+</body>
+</html>
