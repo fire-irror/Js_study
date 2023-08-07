@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Object Literal Syntax Extension</title>
+</head>
+<body>
+    <script>
+      //변수 선언 
+      var firstName = "길동";
+      var lastName = "홍";
+
+      //자바 =class firstName lastName =멤버변수 
+      //js = first== 키 , "길동" = value
+      // var person = {
+      //   firstName : "길동",
+      //   lastName : "홍"
+      // }
+
+      var person = {
+        firstName : firstName ,
+        lastName : lastName
+      }
+      console.log(person);
+      //object의 키 값을 동적으로 할당
+
+      var type1 = "student";
+      var score = {
+        [type1] : "홍" ,
+        point : 95
+      }
+      console.log(score); 
+
+      // score.grame = 1;
+      // console.log(score);
+
+      var type2 = "grade"
+      score[type2] = 1;
+      console.log(score);
+
+      //[type2] 동적으로 바꾸기
+    </script>
+</body>
+</html>
