@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>object Destructuring</title>
+</head>
+<body>
+    <script>
+      function getPerson(){
+        return {
+          firstName : "길동",
+          lastName : "홍",
+          age : 23,
+          email : "Hong@gmail.com",
+          city : "Seoul",
+          country : "Korea"
+        }
+      }
+      
+      //person이라는 object를 가져와서 찍는다.
+      // var person = getPerson();
+      // console.log(person);  //결과값 object
+      // console.log(person.firstName);  //결과값 : 길동
+      // console.log(person.lastName); //결과값 : 홍
+
+    
+      var {firstName,lastName }= getPerson();
+      console.log(firstName);
+      console.log(lastName);
+
+
+      
+
+
+    </script>
+</body>
+</html>
