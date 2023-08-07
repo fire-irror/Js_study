@@ -7,15 +7,13 @@
       function solution(a,b,c){
         let answer;
 
-        if(a+b>c && a+c>b && b+c>a){
-          answer="yes"
-        }
-        else{
-          answer="No"
-        }
+      if(a+b>c && b+c>a && c+a>b)
+        answer = "yes!";
+        else
+        answer ="NO";
         return answer;
       }
-      console.log(solution(1,2,3));
+      console.log(solution(3,4,5));
     </script>
 </body>
 </html>
