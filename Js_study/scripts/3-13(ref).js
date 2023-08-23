@@ -1,0 +1,1 @@
+import {log} from "/Js_study/scripts/3-13(module).js";
