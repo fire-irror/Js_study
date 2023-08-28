@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>strick mode</title>
+</head>
+<body>
+    <script>
+      "use strict"
+
+      function myFunction(){
+        y =2;
+        return y;
+      }
+      console.log(myFunction());
+
+      "use strick"
+      function myFunction(){
+        y=2;
+        return y;             //에러 발생
+      }
+      console.log(myFunction());
+    </script>
+</body>
+</html>
