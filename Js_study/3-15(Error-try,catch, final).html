@@ -1,26 +1,38 @@
 <html>
 <head>
-    <title>error</title>
+    <title>Error - try, catch, finally</title>
 </head>
 <body>
     <script>
-      try{
-        console.log("Log Message");
-      }catch(err){
-        console.log(err.name);
-        console.log(err.message);
-      }
+        try {
+            consol.log("log message");
+        } catch(error) {
+            console.log(error.name);// ReferenceError
+            console.log(error.message);
+        }
+        // 예외 처리를 하면 에러가 아닌 예외가 발생하므로 아래의 코드가 실행된다.
+        console.log("안녕하세요?");
 
-      var x = "";
-      try{
-        if(x==="") throw "empty"
-        var y = x + 3;
-      }catch(err){
-        console.log(`x is ${err}`);
-      }
-      finally{
-        console.log("에러 유무와 관계 없이 무조건 실행됨.");
-      }
+
+        // throw를 사용해서 강제로 에러를 발생
+        var x = "";
+        var y = 5;
+        try {
+            // 문법적으로 에러는 아니지만
+            // 값을 받아와야 다음을 처리해야 한다면
+            // x가 ""인 상태에서는 미리 에러를 발생시킨다.
+            if ( x === "") {
+                throw "empthy";
+            }
+            var sum = y + 3;
+            console.log(sum);
+        } catch (error) {
+            console.log(`${error}`);
+            // console.log(error.message);
+        } finally {
+            console.log("에러 유무와 상관없이 무조건 실행됨");
+        }
+
     </script>
 </body>
 </html>
