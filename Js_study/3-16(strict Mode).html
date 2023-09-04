@@ -1,23 +1,41 @@
 <html>
 <head>
-    <title>strick mode</title>
+    <title>Strict Mode</title>
 </head>
 <body>
     <script>
-      "use strict"
+        // strict mode : javascript 초기의 관용적인 문법을 허용하지 않고,
+        // 문법 규칙을 엄격하게 적용함.
 
-      function myFunction(){
-        y =2;
-        return y;
-      }
-      console.log(myFunction());
+        // 원래의 자바스크립트는 유연한 언어임
+        // x = "1.1";
+        // console.log(x);// 정상 실행
+        // 하지만 핵심적인 언어로 발전하다보니
+        // 유연한 장점이 유지보수를 힘들게 하는 원인이 됨
 
-      "use strick"
-      function myFunction(){
-        y=2;
-        return y;             //에러 발생
-      }
-      console.log(myFunction());
+
+        // "use strict"
+        // y = 3.14;// 에러 발생
+
+
+        // function myFunction() {
+        //     x = 2;
+        //     return x;
+        // }
+
+        // console.log(myFunction());// 정상 실행
+
+
+        "use strict"
+        function myFunction() {
+            x = 2;// 에러 발생
+            return x;
+        }
+
+        console.log(myFunction());
+
+
+        // 핵심 요약 - "use strict" 를 위에 사용하면 문법을 엄격히 본다.
     </script>
 </body>
 </html>
