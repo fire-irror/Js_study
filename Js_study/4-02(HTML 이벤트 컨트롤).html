@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>HTML 이벤트 컨트롤</title>
+</head>
+<body>
+  focus: blur:
+  <br>
+    <input type="text" id="text1" onfocus="doFocus()" onblur="doBlur(this)"> <!--doFocus는 자용자 정의 함수 -->
+    <br>
+    select :
+    <br>
+    <select id="select1" onchange="doChange()">
+    <option value="KO">Korea</option>
+    <option value="JA">Japan</option>
+    <option value="Ch">China</option>
+  </select>
+
+  <br>
+  keydown:
+  <br>
+  <input type="text" id="text2" onkeydown="dokeydown(event)">
+  <input type="button" value="조회하기" onclick="doSearch()">
+    <script>
+      count =0;
+
+      function doSearch(){
+        console.log("조회시작");
+      }
+      function doChange(){
+        // alert("메롱메롱 퀘케ㅔ케케");
+        //console.log("doChange()호출");
+        let selectValue = document.getElementById("select1").value;
+        console.log(selectValue);
+      }
+
+      function dokeydown(event){
+        if(event.keyCode == 13)
+          doSearch();
+      }
+
+      function doFocus(){
+        console.log("doFocus() 호출");
+      }
+
+      function doBlur(obj){
+        if(obj.value ==""){
+          alert("필수값 입니다. 반드시 값을 입력해주세요");
+        }
+        console.log(obj.value); //사용자가 입력한 값이 나온다
+      }
+    </script>
+</body>
+</html>
