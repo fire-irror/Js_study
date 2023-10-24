@@ -1,0 +1,83 @@
+<html>
+<head>
+    <title>스타일 시트 컨트롤</title>
+    <style>
+      .border-red{
+        border:2px dashed red;
+      }
+
+      .border-green{
+        border:2px solid green;
+      }
+      .border-default{
+        border:2px solid blue ;
+      }
+    </style>
+</head>
+<body>
+  Text :
+  <br>
+  <input type="text" id="text1" onblur="changeBorder()">
+  <br>
+  <br>
+  Radio(이메일 수신) : 
+  <input type="radio" name="radio_email-yn" value="Y" onclick="showEmail()">동의
+  <input type="radio" name="radio_email-yn" value="N" onclick="hideEmail()">거부
+  <div id="divEmail" style="display: none;">
+    이메일<input type="text" id="email">
+  </div>
+  <br>
+  <input type="button" value="저장" onclick="doSave()">
+  <br>
+  <select id="select1" onchange="doChange(this)">
+    <option value="">선택하세요</option>
+    <option value="KO">Korea</option>
+    <option value="JA">Japan</option>
+    <option value="CH">China</option>
+  </select>
+
+  <select id="select2" style="display: none;">
+    <option value="">서울</option>
+    <option value="">대전</option>
+    <option value="">대구</option>
+    <option value="">부산</option>
+  </select>
+
+  <select id="select3" style="display: none;">
+    <option value="">상하이</option>
+    <option value="">북경</option>
+    <option value="">홍콩</option>
+    <option value="">베이징</option>
+  </select>
+    <script>
+      function doChange(obj) {
+        if(obj.value === "KO"){
+          document.getElementById("select2").style.display="";
+        }
+        else 
+        document.getElementById("select2").style.display="none";
+      }
+      function showEmail(){
+        document.getElementById("divEmail").style.display="";
+      }
+      function hideEmail(){
+        document.getElementById("divEmail").style.display="none";
+      }
+      function doSave(){
+        if(text1.value === ""){
+          return alert("필수값을 입력하주세요...");
+        }
+      }
+      function changeBorder(){
+        var txt1 = document.getElementById("text1");
+        // console.log(txt1.value);
+        if(txt1.value === "red")
+          text1.className = "border-red";
+          else if(txt1.value === "green")
+          text1.className = "border-green";
+          else
+          text1.className = "border-default";
+      }
+    </script>
+</body>
+</html>
